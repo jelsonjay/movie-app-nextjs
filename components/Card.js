@@ -1,4 +1,6 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
+
 
 function Card ({item}) {
 
@@ -11,6 +13,10 @@ function Card ({item}) {
    </div>
    <div className='body'>
    <h2>{item.title}</h2>
+   <p dangerouslySetInnerHTML={{__html: item.info}}></p>
+   <Link href="/movies/[slug]" as={`/movies/${item.slug}`}>
+   <a>Read more about this article</a>
+   </Link>
    </div>
     </CardWrap>
   )
@@ -33,6 +39,10 @@ h2{
 p{
  color: #666;
  line-height: 1.5;
+}
+a{
+  display: inline-block;
+  margin: 20px 0;
 }
 
 `

@@ -8,7 +8,7 @@ import {Flex, Box} from 'reflexbox'
   return (
   <Box variant="container">
    <Box my={40} as='h1'>Best Movies o 2021</Box>
-   <Flex justifyContent='space-between' flexDirection={{_: 'column', md: 'row'}}>
+   <Flex justifyContent='space-between' flexDirection={{_: 'column', md: 'row'}} md={100}>
    {movies.map(item => (
     <Box key={item.id} width={{_: '100%', md: '30%'}}>
     <Card item={item} />
